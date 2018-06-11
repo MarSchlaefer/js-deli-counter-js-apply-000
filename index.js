@@ -6,7 +6,7 @@ function takeANumber(katzDeliLine, newName) {
 }
 
 function nowServing(katzDeliLine) {
-  var serving = "Currently serving " + katzDeliLine[0] + ".";
+  var serving = `Currently serving ${katzDeliLine[0]}.`;
   if (katzDeliLine.length > 0) {
     katzDeliLine.shift();
     return serving;
@@ -21,10 +21,10 @@ function currentLine(katzDeliLine) {
     for (let i = 0; i < katzDeliLine.length; i++) {
       let currentCustomer = katzDeliLine[i];
     if (i < katzDeliLine.length - 1) {
-    currentLine = currentLine + (i + 1) + ". " + currentCustomer + ", ";
+    currentLine = `${currentLine}${(i + 1)}. ${currentCustomer}, `;
     }
     if (i === katzDeliLine.length - 1) {
-      currentLine = currentLine +(i + 1) + ". " + currentCustomer;
+      currentLine = `${currentLine}${(i + 1)}. ${currentCustomer}`;
       }
     }
   } else {
